@@ -110,27 +110,6 @@ router.put('/upvote', withAuth, (req, res) => {
     }
   });
 
-// Update Whiskeys
-// router.put('/:id', withAuth, (req, res) => {
-//     Whiskey.update(req.body, {
-//         individualHooks: true,
-//         where: {
-//             id: req.params.id
-//       }
-//     })
-//       .then(dbWhiskeyData => {
-//         if (!dbWhiskeyData[0]) {
-//           res.status(404).json({ message: 'No Whiskey found with this id' });
-//           return;
-//         }
-//         res.json(dbWhiskeyData);
-//       })
-//       .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//       });
-// });
-
 // Delete Whiskeys
 router.delete('/:id', withAuth, (req, res) => {
     Whiskey.destroy({

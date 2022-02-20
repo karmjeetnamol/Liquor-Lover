@@ -36,7 +36,7 @@ Whiskey.init(
         primaryKey: true,
         autoIncrement: true
       },
-      // We talked about limiting the number of preselected...will need to work in to code
+      // limiting the number of preselected...will need to work in to code
       name: {
         type: DataTypes.STRING,
         allowNull: false
