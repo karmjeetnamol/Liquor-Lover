@@ -4,7 +4,9 @@ const { Whiskey, User, Vote, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Get all Whiskeys for /inventory
+
 router.get('/', withAuth, (req, res) => {
+  console.log("inventery")
     console.log(req.session);
     Whiskey.findAll({
         where: {
@@ -35,6 +37,7 @@ router.get('/', withAuth, (req, res) => {
         ]
       })
         .then(dbWhiskeyData => {
+          console.log(dbWhiskeyData)
           const whiskeys = dbWhiskeyData.map(whiskey => whiskey.get({ plain: true }));
           res.render('inventory', {whiskeys, loggedIn: true});
         })

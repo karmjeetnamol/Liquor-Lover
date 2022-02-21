@@ -5,12 +5,9 @@ const userData = [
     username: 'test',
     type: 'Bourbon',
     created_at: new Date(),
-
   },
-
- 
 ];
 
-const seedUsers = () => Users.bulkCreate(userData);
+const seedUsers = () => User.bulkCreate(userData);
 
 module.exports = seedUsers;
