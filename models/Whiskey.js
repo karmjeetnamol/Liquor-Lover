@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const { truncate } = require('./User');
 
-// create our Post model
+//Post model
 class Whiskey extends Model {
     static upvote(body, models) {
         return models.Vote.create({
@@ -27,7 +27,7 @@ class Whiskey extends Model {
       }
     }
 
-// create fields/columns for Post model
+//columns for Post model
 Whiskey.init(
     {
       id: {
@@ -36,7 +36,7 @@ Whiskey.init(
         primaryKey: true,
         autoIncrement: true
       },
-      // limiting the number of preselected...will need to work in to code
+      // limiting the number of preselected
       name: {
         type: DataTypes.STRING,
         allowNull: false

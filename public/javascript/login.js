@@ -1,5 +1,6 @@
-async function loginFormHandler(event) {
-    event.preventDefault();
+const loginFormHandler = async (event) => {
+  event.preventDefault();
+
   
     const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
@@ -16,7 +17,7 @@ async function loginFormHandler(event) {
     console.log(response)
       if (response.ok) {
         console.log("response.ok")
-        window.location.replace('/inventory');
+        window.location.assign('/inventory');
       } else {
         alert(response.statusText);
       }

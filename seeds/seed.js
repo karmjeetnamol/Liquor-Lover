@@ -1,4 +1,3 @@
-//Placeholders...
 const seedWhiskey = require('./whiskey-seeds');
 
 const sequelize = require('../config/connection');

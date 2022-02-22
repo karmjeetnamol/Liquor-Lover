@@ -1,4 +1,4 @@
-async function newWhiskeyHandler(event) {
+const newWhiskeyHandler = async(event) => {
   event.preventDefault();
 
   const name = document.querySelector('#whiskey').value.trim();

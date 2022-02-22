@@ -58,6 +58,8 @@ router.get('/:id', (req, res) => {
 
 // Post Users
 router.post('/signup', (req, res) => {
+
+  console.log(req.body, "singup route");
     User.create({
       username: req.body.username,
       email: req.body.email,
@@ -98,7 +100,8 @@ router.post('/login', (req, res) => {
         req.session.email = dbUserData.email;
         req.session.loggedIn = true;
 
-        res.json({ user: dbUserData, message: 'You are now logged in!' });
+       // res.json({ user: dbUserData, message: 'You are now logged in!' });
+       res.redirect('/inventory')
       });
     });
   });

@@ -1,4 +1,4 @@
-async function upvoteClickHandler(event) {
+const upvoteClickHandler = async(event) => {
     event.preventDefault();
   
     const id = window.location.toString().split('/')[
