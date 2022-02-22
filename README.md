@@ -1,6 +1,5 @@
 # Liquor-Lover
 
-# Table of Contents
 
 # Description
 
@@ -20,6 +19,7 @@
    Be responsive.
    Include authentication (express-session and cookies).
    Protect API keys and sensitive information with environment variables.
+
 
 # Installation
 
